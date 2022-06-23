@@ -36,24 +36,14 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST'),
-            'port' => env('MAIL_PORT'),
-            'encryption' => env('MAIL_ENCRYPTION'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'host' => env('MAIL_HOST'), // smtp.gmail.com
+            'port' => env('MAIL_PORT'), // 587
+            'encryption' => env('MAIL_ENCRYPTION'), // tls
+            'username' => env('MAIL_USERNAME'), // 寄信人信箱
+            'password' => env('MAIL_PASSWORD'), // 跟google取得的密碼驗證碼 不是自己登入信箱的那個
             'timeout' => null,
             'auth_mode' => null,
         ],
-        // 'smtp' => [
-        //     'transport' => 'smtp',
-        //     'host' => 'smtp.gmail.com',
-        //     'port' => 587,
-        //     'encryption' => 'tls',
-        //     'username' => 'liao00428@gmail.com',
-        //     'password' => 'izaxeuzpvmzmrabb',
-        //     'timeout' => null,
-        //     'auth_mode' => null,
-        // ],
 
         'ses' => [
             'transport' => 'ses',
@@ -102,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS'),
-        'name' => env('MAIL_FROM_NAME'),
+        'address' => env('MAIL_FROM_ADDRESS'),  // 寄信人信箱
+        'name' => env('MAIL_FROM_NAME'), // 寄信人姓名
     ],
 
     /*
